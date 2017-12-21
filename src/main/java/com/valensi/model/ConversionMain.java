@@ -23,10 +23,10 @@ public class ConversionMain {
      String url ="https://openexchangerates.org/api/latest.json?app_id=31de5d956d1146f798d3b0bbf1890c67"; //ambil data
         RestTemplate resttemplate = new RestTemplate();
         LatestConversion latest = resttemplate.getForObject(url, LatestConversion.class);
-        
+        System.out.println("\n\n\n");
         System.out.println("Base Currency: "+latest.getBase());
         System.out.println("Konversi tanggal: "+latest.getLatestDate());
-        System.out.println("$1 USD = "+latest.getRates().get("IDR"));
+        System.out.println("$1 USD = "+latest.getRates().get("RM"));
         
     }
     
